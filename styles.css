@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    direction: rtl;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* إطار الباب */
+.door-frame {
+    width: 200px;
+    height: 350px;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* الباب */
+.door {
+    width: 180px;
+    height: 340px;
+    background: linear-gradient(to right, #630404, #6d0909);
+    border-radius: 5px;
+    position: relative;
+    transition: transform 1.5s ease-in-out;
+    transform-origin: left;
+}
+
+/* المقبض */
+.handle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(252, 252, 252);
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* عند فتح الباب */
+.door.open {
+    transform: rotateY(-120deg);
+}
+
+/* صندوق الرسالة */
+.message-box {
+    display: none;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #771a1a;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #3b0909;
+}
